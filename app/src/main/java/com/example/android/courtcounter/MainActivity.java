@@ -28,6 +28,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     // Set default variables for reset action
     String hintTeamA = "", hintTeamB = "";
 
+    static final String SCORE_CNT_A = "scoreCntA";
+    static final String SCORE_CNT_B = "scoreCntB";
+    static final String YELLOW_CNT_A = "yellowCntA";
+    static final String YELLOW_CNT_B = "yellowCntB";
+    static final String RED_CNT_A = "redCntA";
+    static final String RED_CNT_B = "redCntB";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -155,24 +162,24 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onSaveInstanceState(Bundle outState){
         super.onSaveInstanceState(outState);
-        outState.putInt("scoreCntA", scoreCntA);
-        outState.putInt("scoreCntB", scoreCntB);
-        outState.putInt("yellowCntA", yellowCntA);
-        outState.putInt("yellowCntB", yellowCntB);
-        outState.putInt("redCntA", redCntA);
-        outState.putInt("redCntB", redCntB);
+        outState.putInt(SCORE_CNT_A, scoreCntA);
+        outState.putInt(SCORE_CNT_B, scoreCntB);
+        outState.putInt(YELLOW_CNT_A, yellowCntA);
+        outState.putInt(YELLOW_CNT_B, yellowCntB);
+        outState.putInt(RED_CNT_A, redCntA);
+        outState.putInt(RED_CNT_B, redCntB);
     }
 
     // Restore current scores
     @Override
     public void onRestoreInstanceState(Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
-        scoreCntA = savedInstanceState.getInt("scoreCntA");
-        scoreCntB = savedInstanceState.getInt("scoreCntB");
-        yellowCntA = savedInstanceState.getInt("yellowCntA");
-        yellowCntB = savedInstanceState.getInt("yellowCntB");
-        redCntA = savedInstanceState.getInt("redCntA");
-        redCntB = savedInstanceState.getInt("redCntB");
+        scoreCntA = savedInstanceState.getInt(SCORE_CNT_A);
+        scoreCntB = savedInstanceState.getInt(SCORE_CNT_B);
+        yellowCntA = savedInstanceState.getInt(YELLOW_CNT_A);
+        yellowCntB = savedInstanceState.getInt(YELLOW_CNT_B);
+        redCntA = savedInstanceState.getInt(RED_CNT_A);
+        redCntB = savedInstanceState.getInt(RED_CNT_B);
         display();
     }
 }
