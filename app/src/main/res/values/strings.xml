@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Court Counter</string>
+    <string name="yellow_card">yellow card</string>
+    <string name="red_card">red card</string>
+    <string name="goal">goal</string>
+    <string name="hint_enter_name">Enter Team Name</string>
+    <string name="basic_score">0</string>
 </resources>

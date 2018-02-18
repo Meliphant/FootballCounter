@@ -4,14 +4,11 @@ import android.content.Context;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.KeyEvent;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-import java.text.NumberFormat;
 import android.widget.TextView.OnEditorActionListener;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
@@ -39,7 +36,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         // Define global variables by views' id
         scoreTeamA = (TextView) findViewById(R.id.team_a_score);
         scoreRedTeamA = (TextView) findViewById(R.id.team_a_red);
@@ -73,6 +69,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         nameTeamA.setOnClickListener(this);
         nameTeamB.setOnClickListener(this);
+
 
         nameTeamA.setOnEditorActionListener(new OnEditorActionListener() {
             @Override
